@@ -1,5 +1,6 @@
 package com.fizo.rest.webservices.restful_web_services.User;
 
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -32,7 +33,7 @@ public class UserResource {
 
     //Creating a new resource and returning a status response and location
     @PostMapping("/users")
-    public ResponseEntity<User> createUser(@RequestBody User user){
+    public ResponseEntity<User> createUser(@Valid @RequestBody User user){
         //Creating and saving a new user, with method for saving on userDaoService class
        User savedUser = userDaoService.save(user);
 
@@ -42,5 +43,11 @@ public class UserResource {
                 .buildAndExpand(savedUser.getId())
                 .toUri();
       return ResponseEntity.created(location).build();
+    }
+
+    //DELETE controller method, deleting user by id
+    @DeleteMapping("/users/{id}")
+    public void deleteUser(@PathVariable int id) {
+        userDaoService.deleteUserById(id);
     }
 }

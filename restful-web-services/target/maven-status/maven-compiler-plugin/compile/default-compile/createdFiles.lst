@@ -1,0 +1,9 @@
+com\fizo\rest\webservices\restful_web_services\helloWorld\HelloWorldBean.class
+com\fizo\rest\webservices\restful_web_services\User\User.class
+com\fizo\rest\webservices\restful_web_services\User\UserResource.class
+com\fizo\rest\webservices\restful_web_services\User\UserNotFoundException.class
+com\fizo\rest\webservices\restful_web_services\exception\CustomizedResponseEntityExceptionHandler.class
+com\fizo\rest\webservices\restful_web_services\RestfulWebServicesApplication.class
+com\fizo\rest\webservices\restful_web_services\exception\ErrorDetails.class
+com\fizo\rest\webservices\restful_web_services\helloWorld\HelloWorldController.class
+com\fizo\rest\webservices\restful_web_services\User\UserDaoService.class
